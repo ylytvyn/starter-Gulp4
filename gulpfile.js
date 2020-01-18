@@ -1,21 +1,22 @@
-var gulp = require('gulp'),
-	sass = require('gulp-sass'),
-	browsersync = require("browser-sync").create(),
-	plumber = require("gulp-plumber"),
-	rename = require("gulp-rename"),
-	postcss = require("gulp-postcss"),
-	autoprefixer = require("autoprefixer"),
-	cssnano = require("cssnano"),
-	imagemin = require("gulp-imagemin"),
-	cache = require('gulp-cache'),
-	del = require("del"),
-	useref = require('gulp-useref'),
-	uglify = require('gulp-uglify'),
-	gulpIf = require('gulp-if'),
-	wait = require('gulp-wait'),
-	notify = require('gulp-notify');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const browsersync = require("browser-sync").create();
+const plumber = require("gulp-plumber");
+const rename = require("gulp-rename");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
+const imagemin = require("gulp-imagemin");
+const cache = require('gulp-cache');
+const del = require("del");
+const useref = require('gulp-useref');
+const uglify = require('gulp-uglify');
+const gulpIf = require('gulp-if');
+const wait = require('gulp-wait');
+const notify = require('gulp-notify');
 
-var paths = {
+
+let paths = {
 	css: {
 		src: "app/scss/**/*.scss",
 		dest: "app/css",
@@ -38,7 +39,7 @@ var paths = {
 	}
 };
 
-var sources = {
+let sources = {
 	css: [
 		'./node_modules/bootstrap/dist/css/bootstrap.min.css'
 	],
